@@ -59,6 +59,10 @@ Key challenges captured include:
 - **Extreme Scale Variations:** Unconstrained environments lead to minute, sub-scale interactive targets.
 - **Boundary Discontinuity:** Continuous objects are split at image edges.
 
+<div align="center">
+    <img src="assets/challenge.png" alt="challenge" width="90%">
+</div>
+
 *(Dataset download links and formatting instructions will be provided here soon.)*
 
 ---
