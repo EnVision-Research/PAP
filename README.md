@@ -29,7 +29,7 @@ Official repository for the paper: **Panoramic Affordance Prediction**.
 
 ## 🌟 Highlights
 - **New Task:** We introduce the first exploration into **Panoramic Affordance Prediction**, overcoming the "tunnel vision" of traditional pinhole camera models.
-- **PAP-12K Dataset:** A large-scale benchmark featuring 1,003 ultra-high-resolution (12K) panoramic images and over 13,000 carefully annotated reasoning-based QA pairs with pixel-level masks.
+- **PAP-12K Dataset:** A large-scale benchmark featuring 1,003 ultra-high-resolution (12K) panoramic images and over 13,000 carefully annotated reasoning-based QA pairs with pixel-level affordance masks.
 - **PAP Framework:** A training-free, coarse-to-fine pipeline mimicking human foveal vision to handle panoramic challenges like geometric distortion, scale variations, and boundary discontinuity.
 
 ---
