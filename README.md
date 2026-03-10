@@ -4,7 +4,7 @@
 
 [Zixin Zhang](https://scholar.google.com/citations?user=BbZ0mwoAAAAJ&hl=zh-CN)<sup>1*</sup>, [Chenfei Liao](https://chenfei-liao.github.io/)<sup>1*</sup>, [Hongfei Zhang](https://github.com/soyouthinkyoucantell)<sup>1</sup>, [Harold H. Chen](https://haroldchen19.github.io/)<sup>1</sup>, [Kanghao Chen](https://scholar.google.com/citations?hl=zh-CN&user=IwvcylUAAAAJ&view_op=list_works&sortby=pubdate)<sup>1</sup>, [Zichen Wen](https://scholar.google.com/citations?user=N-aPFvEAAAAJ&hl=zh-CN&oi=ao)<sup>3</sup>, [Litao Guo](https://scholar.google.com/citations?hl=zh-CN&user=efdm760AAAAJ)<sup>1</sup>, [Bin Ren](https://amazingren.github.io/)<sup>4</sup>, [Xu Zheng](https://zhengxujosh.github.io/)<sup>1</sup>, [Yinchuan Li](https://yinchuanll.github.io/)<sup>6</sup>, [Xuming Hu](https://xuminghu.github.io/)<sup>1</sup>, [Nicu Sebe](https://disi.unitn.it/~sebe/)<sup>5</sup>, [Ying-Cong Chen](https://www.yingcong.me/)<sup>1,2&dagger;</sup>
 
-<sup>1</sup>HKUST(GZ), <sup>2</sup>HKUST, <sup>3</sup>SJTU, <sup>4</sup>MBZUAI, <sup>5</sup>University of Trento, <sup>6</sup>Knowin
+<sup>1</sup>HKUST(GZ), <sup>2</sup>HKUST, <sup>3</sup>SJTU, <sup>4</sup>MBZUAI, <sup>5</sup>UniTrento, <sup>6</sup>Knowin
 
 <small>*Equal contribution &nbsp;&nbsp;&nbsp; &dagger;Corresponding author</small>
 
