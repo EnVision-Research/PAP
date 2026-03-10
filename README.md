@@ -1,4 +1,4 @@
-# Panoramic Affordance Prediction (PAP)
+<h2 align="center"> Panoramic Affordance Prediction (PAP)</h2>
 
 <div align="center">
     <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/"><img src="https://img.shields.io/badge/Project-Page-blue?style=for-the-badge&logo=github&logoColor=white" alt="Project Page"></a>
