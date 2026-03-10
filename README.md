@@ -75,5 +75,5 @@ Our proposed PAP framework operates in three primary stages to tackle 360-degree
 
 ---
 
-
-
+## 📧 Contact
+If you have any questions or suggestions, please feel free to contact us at [zzhang300@connect.hkust-gz.edu.cn](mailto:zzhang300@connect.hkust-gz.edu.cn), [cliao127@connect.hkust-gz.edu.cn](mailto:cliao127@connect.hkust-gz.edu.cn).
