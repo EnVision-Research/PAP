@@ -13,7 +13,8 @@
 
 <div align="center">
     <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/"><img src="https://img.shields.io/badge/Project-Page-blue?style=for-the-badge&logo=github&logoColor=white" alt="Project Page"></a>
-    <a href="#"><img src="https://img.shields.io/badge/Paper-Coming_Soon-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
+    <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_high_res.pdf"><img src="https://img.shields.io/badge/Paper_(High--res)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
+    <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_low_res.pdf"><img src="https://img.shields.io/badge/Paper_(Low--res)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
     <a href="#"><img src="https://img.shields.io/badge/Dataset-Coming_Soon-orange?style=for-the-badge&logo=huggingface&logoColor=white" alt="Dataset"></a>
 </div>
 <br>
@@ -31,9 +32,15 @@ Official repository for the paper: **Panoramic Affordance Prediction**.
 </div>
 
 
+## 🚀 News
+* **[2026-03-14]** 📄 [Paper](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_high_res.pdf) is released.
+* **[2026-03-11]** 🌐 [Repository](https://github.com/EnVision-Research/PAP) and [Webpage](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/) are released.
+
+---
+
 ## 🚀 Right Around the Corner!
 
-**The codebase is currently undergoing internal review and clean-up.**
+**The codebase and dataset is currently undergoing internal review and clean-up.**
 
 We plan to release the following components soon (**in two weeks**):
 - [ ] PAP-12K Dataset (All full resolution images, QA annotations, and Segmentation Masks)
