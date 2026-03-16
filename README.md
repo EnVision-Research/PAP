@@ -33,21 +33,9 @@ Official repository for the paper: **Panoramic Affordance Prediction**.
 
 
 ## 🚀 News
+* **[2026-03-16]** 🔥 [PAP-12K Dataset](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/#dataset-preview) and [PAP Inference Code](https://github.com/EnVision-Research/PAP) are released! Welcome to try it out!
 * **[2026-03-14]** 📄 [Paper](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_high_res.pdf) is released.
 * **[2026-03-11]** 🌐 [Repository](https://github.com/EnVision-Research/PAP) and [Webpage](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/) are released.
-
----
-
-## 🚀 Right Around the Corner!
-
-**The codebase and dataset is currently undergoing internal review and clean-up.**
-
-We plan to release the following components soon (**in two weeks**):
-- [ ] PAP-12K Dataset (All full resolution images, QA annotations, and Segmentation Masks)
-- [ ] Evaluation Scripts for the benchmark
-- [ ] Source Code for the PAP inference pipeline
-
-***Please stay tuned for updates!***
 
 ---
 
