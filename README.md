@@ -21,7 +21,7 @@
 
 Official repository for the paper: **Panoramic Affordance Prediction**.
 
-> Affordance prediction serves as a critical bridge between perception and action in embodied AI. However, existing research is confined to pinhole camera models, which suffer from narrow Fields of View (FoV) and fragmented observations. In this paper, we present the first exploration into **Panoramic Affordance Prediction**, utilizing 360-degree imagery to capture global spatial relationships and holistic scene understanding. 
+> Affordance prediction serves as a critical bridge between perception and action in the embodied AI era. However, existing research is confined to pinhole camera models, which suffer from narrow Fields of View (FoV) and fragmented observations. In this paper, we present the first exploration into **Panoramic Affordance Prediction**, utilizing 360-degree imagery to capture global spatial relationships and holistic scene understanding. 
 
 
 
