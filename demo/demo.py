@@ -197,7 +197,7 @@ def main():
     parser.add_argument("--vlm_api_key", type=str, default=None, help="API key for authentication")
     parser.add_argument("--rex_model", type=str, default="IDEA-Research/Rex-Omni", help="Rex-Omni model path")
     parser.add_argument("--sam2_model", type=str, default="facebook/sam2.1-hiera-large", help="SAM2 model path")
-    parser.add_argument("--system_prompt_path", type=str, default=os.path.join(parent_dir, "system_prompt/combined_0225.md"), help="System prompt for VLM")
+    parser.add_argument("--system_prompt_path", type=str, default=os.path.join(parent_dir, "system_prompt/visual_grid_prompting.md"), help="System prompt for VLM")
     
     # Grid and resolution parameters
     parser.add_argument("--grid_cols", type=int, default=4, help="Number of grid columns")
