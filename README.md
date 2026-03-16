@@ -13,7 +13,7 @@
 
 <div align="center">
     <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/"><img src="https://img.shields.io/badge/Project-Page-blue?style=for-the-badge&logo=github&logoColor=white" alt="Project Page"></a>
-    <a href="#"><img src="https://img.shields.io/badge/Dataset-Coming_Soon-orange?style=for-the-badge&logo=huggingface&logoColor=white" alt="Dataset"></a>
+    <a href="#"><img src="https://img.shields.io/badge/Dataset-Download_ZIP-orange?style=for-the-badge&logo=icloud&logoColor=white" alt="Dataset"></a>
     <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_high_res.pdf"><img src="https://img.shields.io/badge/Paper_(High--res)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
     <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_low_res.pdf"><img src="https://img.shields.io/badge/Paper_(Low--res)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
 </div>
@@ -58,34 +58,87 @@ We plan to release the following components soon (**in two weeks**):
 
 ---
 
-## 📊 Dataset (PAP-12K)
+## 🛠️ Environment Setup
+1. Download the models
 
-PAP-12K is explicitly designed to encapsulate the unique challenges of 360° Equirectangular Projection (ERP) imagery. Unlike synthetic or web-crawled datasets, **all 1,003 ultra-high resolution (11904×5952) panoramic images in PAP-12K were natively captured in real-world environments using professional 360° cameras.** This ensures authentic geometric distortions, lighting conditions, and natural object scales, bridging the gap between static dataset evaluation and practical robotic applications.
-
-Key challenges captured include:
-- **Geometric Distortion:** Objects suffer from severe stretching near the poles.
-- **Extreme Scale Variations:** Unconstrained environments lead to minute, sub-scale interactive targets.
-- **Boundary Discontinuity:** Continuous objects are split at image edges.
-
-<div align="center">
-    <img src="assets/challenge.png" alt="challenge" width="90%">
-</div>
-
-*(Dataset download links and formatting instructions will be provided here soon.)*
-
+```
+huggingface-cli download Qwen/Qwen3-VL-32B-Instruct
+huggingface-cli download IDEA-Research/Rex-Omni
+huggingface-cli download facebook/sam2.1-hiera-large
+```
+2. Install Dependencies
+```shell
+conda create -n pap python=3.11
+conda activate pap
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.5cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
+pip install -r requirements.txt
+pip install git+https://github.com/IDEA-Research/Rex-Omni.git --no-deps
+pip install git+https://github.com/facebookresearch/sam2.git
+```
 ---
 
-## 🛠️ Method Overview
 
-Our proposed PAP framework operates in three primary stages to tackle 360-degree scenes:
+## 🚀 Quick Demo
+First, use vllm to deploy the model. Qwen3-VL-32B model requires about 60~70 GB GPU memory when deployed with vllm, you can adjust the tensor-parallel-size according to your GPU memory.
 
-1. **Recursive Visual Routing:** Uses numerical grid prompting to guide Vision-Language Models (VLMs) to dynamically "zoom in" and coarsely locate target tools.
-2. **Adaptive Gaze:** Projects the spherical region onto a tailored perspective plane to act as a domain adapter, eliminating geometric distortions and boundary discontinuities.
-3. **Cascaded Affordance Grounding:** Deploys robust 2D vision models (Open-Vocabulary Detector + SAM) within the rectified patch to extract precise, instance-level masks.
+> PAP is a highly adaptive framework. We use Qwen3-VL-32B as our validated default VLM, but you can quickly swap it for any other local VLM. As long as a model is compatible with vLLM and meets a basic quality threshold, it can be integrated into this pipeline directly with solid results.
+```
+vllm serve Qwen/Qwen3-VL-32B-Instruct --served-model-name qwen3-vl-32b --port 8000 --max_model_len 20000 --tensor-parallel-size 2 
+```
+Then, run the demo code to inference on the provided image and question (or you can put your own image and question here).
+```
+cd demo
+python demo.py \
+    --vlm_api_url "http://localhost:8000" \
+    --vlm_model_name "qwen3-vl-32b" \
+    --image_path "kitchen.jpg" \
+    --question_file "kitchen.txt" \
+    --output "kitchen_output"
+```
+---
 
-<div align="center">
-    <img src="assets/pipeline.svg" alt="pipeline" width="90%">
-</div>
+## 📊 PAP-12K Dataset
+### Dataset Preview
+We provide a preview of the PAP-12K Dataset in [Dataset-Preview](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/#dataset-preview). You can check the preview of the dataset before downloading. 
+
+### Downloading with Cloud Drive
+1. [Google Drive](https://drive.google.com/file/d/1Bq4wLL9AoSBP1Im545qKWlk85cP21VQE/view?usp=sharing)
+2. [Baidu Netdisk](https://pan.baidu.com/s/1FeNdQ67vkfUYX0qXerInTw?pwd=u8vd)
+
+### Dataset Structure
+You can refer to utils/dataset_utils.py for reading the dataset. The dataset structure is as follows:
+```
+PAP-12K
+├── balcony/
+├──── 0001/
+├────── washing_machine/
+├──────── mask.png
+├──────── affordance_question.txt
+├────── faucet/
+├────── ...
+├────── 0001.jpg
+├──── 0002/
+├──── ...
+├── bathroom/
+├── bedroom/
+├── ...
+```
+---
+
+## 🚀 Inference on PAP-12K
+```shell
+vllm serve Qwen/Qwen3-VL-32B-Instruct --served-model-name qwen3-vl-32b --port 8088 --max_model_len 20000 --tensor-parallel-size 1 
+```
+```
+python run.py \
+    --dataset_root /path/to/PAP-12K \
+    --output output/PAP \
+    --vlm_api_url http://localhost:8088 \
+    --vlm_model_name qwen3-vl-32b \
+    --vlm_concurrency 8 \
+    --resume
+```
 
 ---
 
