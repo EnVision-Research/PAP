@@ -47,19 +47,27 @@ Official repository for the paper: **Panoramic Affordance Prediction**.
 ---
 
 ## 🛠️ Environment Setup
-1. Download the models
+### 1. Download the models
 
 ```
 huggingface-cli download Qwen/Qwen3-VL-32B-Instruct
 huggingface-cli download IDEA-Research/Rex-Omni
 huggingface-cli download facebook/sam2.1-hiera-large
 ```
-2. Install Dependencies
-```shell
+### 2. Install Dependencies
+```
 conda create -n pap python=3.11
 conda activate pap
 pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+```
+Flash Attention is required for Rex-Omni. We strongly recommend installing Flash Attention using a pre-built wheel to avoid compilation issues.
+
+You can find the pre-built wheel for your system [here](https://github.com/Dao-AILab/flash-attention/releases). For the environment setup above, use:
+```
 pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.7.4.post1/flash_attn-2.7.4.post1+cu12torch2.5cxx11abiFALSE-cp311-cp311-linux_x86_64.whl
+```
+Then, install the dependencies.
+```
 pip install -r requirements.txt
 pip install git+https://github.com/IDEA-Research/Rex-Omni.git --no-deps
 pip install git+https://github.com/facebookresearch/sam2.git
