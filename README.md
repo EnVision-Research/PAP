@@ -76,17 +76,17 @@ pip install git+https://github.com/facebookresearch/sam2.git
 
 
 ## 🚀 Quick Demo
-First, use vllm to deploy the model. Qwen3-VL-32B model requires about 60~70 GB GPU memory when deployed with vllm, you can adjust the tensor-parallel-size according to your GPU memory.
+First, use vllm to deploy the model. Qwen3-VL-32B model requires about 60~70 GB GPU memory when deployed with vllm, you can adjust the `tensor-parallel-size` according to your GPU memory.
 
 > PAP is a highly adaptive framework. We use Qwen3-VL-32B as our validated default VLM, but you can quickly swap it for any other local VLM. As long as a model is compatible with vLLM and meets a basic quality threshold, it can be integrated into this pipeline directly with solid results.
 ```
-vllm serve Qwen/Qwen3-VL-32B-Instruct --served-model-name qwen3-vl-32b --port 8000 --max_model_len 20000 --tensor-parallel-size 2 
+vllm serve Qwen/Qwen3-VL-32B-Instruct --served-model-name qwen3-vl-32b --port 8088 --max_model_len 20000 --tensor-parallel-size 1
 ```
 Then, run the demo code to inference on the provided image and question (or you can put your own image and question here).
 ```
 cd demo
 python demo.py \
-    --vlm_api_url "http://localhost:8000" \
+    --vlm_api_url "http://localhost:8088" \
     --vlm_model_name "qwen3-vl-32b" \
     --image_path "kitchen.jpg" \
     --question_file "kitchen.txt" \
@@ -124,7 +124,7 @@ PAP-12K
 
 ## 🚀 Inference on PAP-12K
 ```shell
-vllm serve Qwen/Qwen3-VL-32B-Instruct --served-model-name qwen3-vl-32b --port 8088 --max_model_len 20000 --tensor-parallel-size 1 
+vllm serve Qwen/Qwen3-VL-32B-Instruct --served-model-name qwen3-vl-32b --port 8088 --max_model_len 20000 --tensor-parallel-size 1
 ```
 ```
 python run.py \
