@@ -15,7 +15,7 @@
     <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/"><img src="https://img.shields.io/badge/Project-Page-blue?style=for-the-badge&logo=github&logoColor=white" alt="Project Page"></a>
     <a href="#"><img src="https://img.shields.io/badge/Dataset-Download_ZIP-orange?style=for-the-badge&logo=icloud&logoColor=white" alt="Dataset"></a>
     <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_high_res.pdf"><img src="https://img.shields.io/badge/Paper_(High--res)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
-    <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_low_res.pdf"><img src="https://img.shields.io/badge/Paper_(Low--res)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
+    <a href="https://arxiv.org/abs/2603.15558"><img src="https://img.shields.io/badge/Paper_(arXiv)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
 </div>
 <br>
 
