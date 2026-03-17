@@ -13,9 +13,10 @@
 
 <div align="center">
     <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/"><img src="https://img.shields.io/badge/Project-Page-blue?style=for-the-badge&logo=github&logoColor=white" alt="Project Page"></a>
-    <a href="#"><img src="https://img.shields.io/badge/Dataset-Download_ZIP-orange?style=for-the-badge&logo=icloud&logoColor=white" alt="Dataset"></a>
     <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_high_res.pdf"><img src="https://img.shields.io/badge/Paper_(High--res)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
     <a href="https://arxiv.org/abs/2603.15558"><img src="https://img.shields.io/badge/Paper_(arXiv)-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white" alt="Paper"></a>
+    <a href="https://drive.google.com/file/d/1Bq4wLL9AoSBP1Im545qKWlk85cP21VQE/view?usp=sharing"><img src="https://img.shields.io/badge/Dataset-Download_ZIP-orange?style=for-the-badge&logo=icloud&logoColor=white" alt="Dataset"></a>
+    <a href="https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/#dataset-preview"><img src="https://img.shields.io/badge/Dataset-Fast_Preview-orange?style=for-the-badge&logo=icloud&logoColor=white" alt="Dataset"></a>
 </div>
 <br>
 
@@ -33,7 +34,7 @@ Official repository for the paper: **Panoramic Affordance Prediction**.
 
 
 ## 🚀 News
-* **[2026-03-16]** 🔥 [PAP-12K Dataset](#-pap-12k-dataset) and [PAP Inference Code](#-inference-on-pap-12k) are released! Welcome to try it out!
+* **[2026-03-16]** 🔥 [PAP-12K Dataset](#-pap-12k-dataset) and [PAP Inference Code](#-quick-demo) are released! Welcome to try it out!
 * **[2026-03-14]** 📄 [Paper](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/static/papers/Paper_high_res.pdf) is released.
 * **[2026-03-11]** 🌐 [Repository](https://github.com/EnVision-Research/PAP) and [Webpage](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/) are released.
 
@@ -74,6 +75,34 @@ pip install git+https://github.com/facebookresearch/sam2.git
 ```
 ---
 
+## 📊 PAP-12K Dataset
+### Dataset Preview
+We provide a preview of the PAP-12K Dataset in [Dataset-Preview](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/#dataset-preview). You can check the preview of the dataset before downloading. 
+
+### Downloading with Cloud Drive
+1. [Google Drive](https://drive.google.com/file/d/1Bq4wLL9AoSBP1Im545qKWlk85cP21VQE/view?usp=sharing)
+2. [Baidu Netdisk](https://pan.baidu.com/s/1FeNdQ67vkfUYX0qXerInTw?pwd=u8vd)
+
+### Dataset Structure
+You can refer to utils/dataset_utils.py for reading the dataset. The dataset structure is as follows:
+```
+PAP-12K/
+├── balcony/
+│   ├── 0001/
+│   │   ├── washing_machine/
+│   │   │   ├── mask.png
+│   │   │   └── affordance_question.txt
+│   │   ├── faucet/
+│   │   ├── ...
+│   │   └── 0001.jpg
+│   ├── 0002/
+│   └── ...
+├── bathroom/
+├── bedroom/
+└── ...
+```
+
+---
 
 ## 🚀 Quick Demo
 First, use vllm to deploy the model. Qwen3-VL-32B model requires about 60~70 GB GPU memory when deployed with vllm, you can adjust the `tensor-parallel-size` according to your GPU memory.
@@ -91,34 +120,6 @@ python demo.py \
     --image_path "kitchen.jpg" \
     --question_file "kitchen.txt" \
     --output "kitchen_output"
-```
----
-
-## 📊 PAP-12K Dataset
-### Dataset Preview
-We provide a preview of the PAP-12K Dataset in [Dataset-Preview](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/#dataset-preview). You can check the preview of the dataset before downloading. 
-
-### Downloading with Cloud Drive
-1. [Google Drive](https://drive.google.com/file/d/1Bq4wLL9AoSBP1Im545qKWlk85cP21VQE/view?usp=sharing)
-2. [Baidu Netdisk](https://pan.baidu.com/s/1FeNdQ67vkfUYX0qXerInTw?pwd=u8vd)
-
-### Dataset Structure
-You can refer to utils/dataset_utils.py for reading the dataset. The dataset structure is as follows:
-```
-PAP-12K
-├── balcony/
-├──── 0001/
-├────── washing_machine/
-├──────── mask.png
-├──────── affordance_question.txt
-├────── faucet/
-├────── ...
-├────── 0001.jpg
-├──── 0002/
-├──── ...
-├── bathroom/
-├── bedroom/
-├── ...
 ```
 ---
 
