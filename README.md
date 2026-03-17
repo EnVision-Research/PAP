@@ -137,6 +137,17 @@ python run.py \
 ```
 
 ---
+## 💬 Citation
+```
+@article{zhang2026pap,
+    title={Panoramic Affordance Prediction}, 
+    author={Zhang, Zixin and Liao, Chenfei and Zhang, Hongfei and Chen, Harold Haodong and Chen, Kanghao and Wen, Zichen and Guo, Litao and Ren, Bin and Zheng, Xu and Li, Yinchuan and Hu, Xuming and Sebe, Nicu and Chen, Ying-Cong},
+    journal={arXiv preprint arXiv:2603.15558},
+    year={2026}
+  }
+```
+
+---
 
 ## 📧 Contact
 If you have any questions or suggestions, please feel free to contact us at [zzhang300@connect.hkust-gz.edu.cn](mailto:zzhang300@connect.hkust-gz.edu.cn), [cliao127@connect.hkust-gz.edu.cn](mailto:cliao127@connect.hkust-gz.edu.cn).
