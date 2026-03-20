@@ -140,7 +140,7 @@ python run.py \
 
 ---
 ## 💬 Citation
-```
+```bib
 @article{zhang2026pap,
     title={Panoramic Affordance Prediction}, 
     author={Zhang, Zixin and Liao, Chenfei and Zhang, Hongfei and Chen, Harold Haodong and Chen, Kanghao and Wen, Zichen and Guo, Litao and Ren, Bin and Zheng, Xu and Li, Yinchuan and Hu, Xuming and Sebe, Nicu and Chen, Ying-Cong},
