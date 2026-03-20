@@ -85,7 +85,7 @@ We provide a preview of the PAP-12K Dataset in [Dataset-Preview](https://zixinzh
 2. [Baidu Netdisk](https://pan.baidu.com/s/1FeNdQ67vkfUYX0qXerInTw?pwd=u8vd)
 
 ### Dataset Structure
-You can refer to utils/dataset_utils.py for reading the dataset. The dataset structure is as follows:
+You can refer to `utils/dataset_utils.py` for reading the dataset. The dataset structure is as follows:
 ```
 PAP-12K/
 ├── balcony/
