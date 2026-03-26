@@ -78,11 +78,28 @@ pip install git+https://github.com/facebookresearch/sam2.git
 
 ## 📊 PAP-12K Dataset
 ### Dataset Preview
-We provide a preview of the PAP-12K Dataset in [Dataset-Preview](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/#dataset-preview). You can check the preview of the dataset before downloading. 
+We provide an interactive preview of the PAP-12K Dataset in [our webpage](https://zixinzhang02.github.io/Panoramic-Affordance-Prediction/#dataset-preview). You can check the preview of the dataset before downloading.  
 
-### Downloading with Cloud Drive
-1. [Google Drive](https://drive.google.com/file/d/1Bq4wLL9AoSBP1Im545qKWlk85cP21VQE/view?usp=sharing)
-2. [Baidu Netdisk](https://pan.baidu.com/s/1FeNdQ67vkfUYX0qXerInTw?pwd=u8vd)
+### Downloading the PAP-12K
+We provide three ways to download the PAP-12K Dataset:
+#### 1. [Google Drive](https://drive.google.com/file/d/1Bq4wLL9AoSBP1Im545qKWlk85cP21VQE/view?usp=sharing)
+```
+gdown 1Bq4wLL9AoSBP1Im545qKWlk85cP21VQE
+```
+
+#### 2. [Hugging Face](https://huggingface.co/datasets/PanoramaOrg/PAP-12K)
+You only need to download the `.zip` file by running the following command:
+```
+huggingface-cli download --repo-type dataset PanoramaOrg/PAP-12K --include "PAP-12k.zip"
+```
+or
+```
+wget https://huggingface.co/datasets/PanoramaOrg/PAP-12K/resolve/main/PAP-12K.zip
+```
+
+#### 3. [Baidu Netdisk](https://pan.baidu.com/s/1FeNdQ67vkfUYX0qXerInTw?pwd=u8vd)
+Download it manually or using the [bypy](https://github.com/houtianze/bypy).
+
 
 ### Dataset Structure
 You can refer to `utils/dataset_utils.py` for reading the dataset. The dataset structure is as follows:
