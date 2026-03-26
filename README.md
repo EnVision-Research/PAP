@@ -90,7 +90,7 @@ gdown 1Bq4wLL9AoSBP1Im545qKWlk85cP21VQE
 #### 2. [Hugging Face](https://huggingface.co/datasets/PanoramaOrg/PAP-12K)
 You only need to download the `.zip` file by running the following command:
 ```
-huggingface-cli download --repo-type dataset PanoramaOrg/PAP-12K --include "PAP-12k.zip"
+huggingface-cli download --repo-type dataset PanoramaOrg/PAP-12K --include "PAP-12k.zip" --local-dir /path/to/PAP-12K
 ```
 or
 ```
